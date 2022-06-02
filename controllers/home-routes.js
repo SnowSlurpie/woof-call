@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { Dog } = require('../models')
 
 
 module.exports = router;
