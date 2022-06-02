@@ -1,3 +1,3 @@
 DROP DATABASE IF EXISTS woof_call_db;
 
-CREATE DATABASE museum_db;
+CREATE DATABASE woof_call_db;
