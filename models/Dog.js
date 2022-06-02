@@ -23,10 +23,11 @@ Dog.init(
       allowNull: false,
       validate: {
         isNumeric: true,
-        len: [2],
+        min: 0,
+        max: 50,
       },
     },
-    //   add sex option
+    //   add sex option/ enum
     image: {
       type: DataTypes.STRING,
       allowNull: false,
