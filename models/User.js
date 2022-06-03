@@ -28,7 +28,8 @@ User.init(
       allowNull: false,
       validate: {
         isNumeric: true,
-        len: [2],
+        min: 18,
+        max: 150,
       },
     },
     email: {

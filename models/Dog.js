@@ -31,7 +31,9 @@ Dog.init(
     image: {
       type: DataTypes.STRING,
       allowNull: false,
-      // don't know how to validate image because it is a string dataType, unless we want to leave it null
+      validate: {
+        isUrl: true,
+      },
     },
     owner_id: {
       type: DataTypes.INTEGER,
