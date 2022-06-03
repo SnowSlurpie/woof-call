@@ -1,16 +1,66 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { User, Dog } = require('../../models');
+
+//route to get all users
+router.get('/', (req, res) => {
+    User.findAll({
+        attributes: {exclude: ['password']},
+        include: [
+            {
+                model: Dog,
+                attributes: ['id', 'name', 'age', 'sex', 'image']
+            }
+        ]
+    })
+    .then(dbUserData => res.json(dbUserData))
+    .catch(err => {
+        console.log(err)
+        res.status(500).json(err)
+    })
+})
+
+//route to get one user with dog data included
+router.get('/:id', (req, res) => {
+    User.findOne({
+        attributes: {
+            exclude: ['password']
+        },
+        where: {
+            id: req.params.id
+        },
+        include: [
+            {
+                model: Dog,
+                attributes: ['id', 'name', 'age', 'sex', 'image']
+            }
+        ]
+    })
+    .then(dbUserData => {
+        if (!dbUserData) {
+            res.status(404).json({message:'No user found with this id'})
+            return
+        }
+        res.json(dbUserData)
+    })
+    .catch(err => {
+        console.log(err)
+        res.status(500).json(err)
+    })
+})
 
 //user creation route
 router.post('/', async (req, res) => {
     try {
       const dbUserData = await User.create({
-        username: req.body.username,
+        name: req.body.user,
+        age: req.body.age,
         email: req.body.email,
         password: req.body.password,
       });
   
       req.session.save(() => {
+        req.session.user_id = dbUserData.id;
+        req.session.email = dbUserData.email;
         req.session.loggedIn = true;
   
         res.status(200).json(dbUserData);
@@ -33,7 +83,7 @@ router.post('/login', async (req, res) => {
       if (!dbUserData) {
         res
           .status(400)
-          .json({ message: 'Invalid email or password' });
+          .json({ message: 'Invalid email address' });
         return;
       }
   
@@ -42,7 +92,7 @@ router.post('/login', async (req, res) => {
       if (!validPassword) {
         res
           .status(400)
-          .json({ message: 'Invalid email or password' });
+          .json({ message: 'Invalid password' });
         return;
       }
   
