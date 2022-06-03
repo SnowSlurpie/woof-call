@@ -51,4 +51,4 @@ Dog.init(
   }
 );
 
-model.exports = Dog;
+module.exports = Dog;
