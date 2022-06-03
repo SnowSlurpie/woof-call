@@ -1,4 +1,4 @@
-const { Model, DataTypes } = require("sequelize");
+const { Model, DataTypes, Sequelize } = require("sequelize");
 const sequelize = require("../config/connection");
 
 class Dog extends Model {}
@@ -18,6 +18,13 @@ Dog.init(
         isAlpha: true,
       },
     },
+    breed: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        isAlpha: true,
+      },
+    },
     age: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -28,6 +35,10 @@ Dog.init(
       },
     },
     //   add sex option/ enum
+    sex: {
+      type: DataTypes.ENUM("male", "female", "inter-sex"),
+      allowNull: false,
+    },
     image: {
       type: DataTypes.STRING,
       allowNull: false,
