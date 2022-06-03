@@ -18,6 +18,13 @@ Dog.init(
         isAlpha: true,
       },
     },
+    breed: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        isAlpha: true,
+      },
+    },
     age: {
       type: DataTypes.INTEGER,
       allowNull: false,
