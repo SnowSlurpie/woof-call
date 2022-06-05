@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Woof Call</title>
+  <link rel="stylesheet" type="" href="">
+  <link rel="stylesheet" type="" href="">
+</head>
+
+<body>
+  <header>
+    <h1></h1>
+  </header>
+  <nav>
+    <a href="/">Home</a>
+    {{#if loggedout}}
+    <button id="signup" class="btn-no-style">Create an account: Here</button>
+    {{#else}}
+    <a href="/login">Login</a>
+    {{/if}}
+  </nav>
+</body>
