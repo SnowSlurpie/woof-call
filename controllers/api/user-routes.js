@@ -7,8 +7,7 @@ router.get('/', (req, res) => {
         attributes: {exclude: ['password']},
         include: [
             {
-                model: Dog,
-                attributes: ['id', 'name', 'age', 'sex', 'image']
+                model: Dog
             }
         ]
     })
@@ -30,8 +29,7 @@ router.get('/:id', (req, res) => {
         },
         include: [
             {
-                model: Dog,
-                attributes: ['id', 'name', 'age', 'sex', 'image']
+                model: Dog
             }
         ]
     })

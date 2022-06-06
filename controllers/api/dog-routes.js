@@ -4,7 +4,6 @@ const { User, Dog } = require('../../models');
 //route to get all dogs with user(owner) data
 router.get('/', (req, res) => {
     Dog.findAll({
-        attributes: ['id', 'name', 'age', 'sex', 'image'],
         include: [
             {
                 model: User,
@@ -25,7 +24,6 @@ router.get('/:id', (req, res) => {
         where: {
             id: req.params.id
         },
-        attributes: ['id', 'name', 'age', 'sex', 'image'],
         include: [
             {
                 model: User,
@@ -45,9 +43,15 @@ router.post('/', async (req, res) => {
     try {
       const dbDogData = await Dog.create({
         name: req.body.name,
+        breed: req.body.breed,
         age: req.body.age,
-        image: req.body.image,
         sex: req.body.sex,
+        activity: req.body.activity,
+        playfulness: req.body.playfulness,
+        socialization: req.body.socialization,
+        bio: req.body.bio,
+        is_fixed: req.body.is_fixed,
+        image: req.body.image,
         owner_id: req.body.owner_id
       });
 
