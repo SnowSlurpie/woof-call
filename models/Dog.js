@@ -39,6 +39,36 @@ Dog.init(
       type: DataTypes.ENUM("male", "female", "inter-sex"),
       allowNull: false,
     },
+    activity: {
+      type: DataTypes.INTEGER,
+      validate: {
+        isNumeric: true,
+        min:1,
+        max: 5
+      }
+    },
+    playfulness: {
+      type: DataTypes.INTEGER,
+      validate: {
+        isNumeric: true,
+        min:1,
+        max: 5
+      }
+    },
+    socialization: {
+      type: DataTypes.INTEGER,
+      validate: {
+        isNumeric: true,
+        min:1,
+        max: 5
+      }
+    },
+    bio: {
+      type: DataTypes.STRING
+    },
+    isFixed: {
+      type: DataTypes.BOOLEAN
+    },
     image: {
       type: DataTypes.STRING,
       allowNull: false,
