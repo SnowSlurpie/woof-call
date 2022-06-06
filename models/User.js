@@ -28,7 +28,8 @@ User.init(
       allowNull: false,
       validate: {
         isNumeric: true,
-        len: [2],
+        min: 18,
+        max: 150,
       },
     },
     email: {
@@ -43,9 +44,16 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [6, 10],
+        len: [6],
       },
     },
+    location: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        len: [5]
+      }
+    }
   },
   {
     hooks: {
@@ -62,4 +70,4 @@ User.init(
   }
 );
 
-model.exports = User;
+module.exports = User;
