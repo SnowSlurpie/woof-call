@@ -1,6 +1,6 @@
 const { Dog } = require("../models");
 
-const dogdata = [
+const dogData = [
   {
     name: "Charlie",
     breed: "Poodle",
