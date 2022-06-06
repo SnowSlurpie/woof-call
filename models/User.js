@@ -47,6 +47,13 @@ User.init(
         len: [6],
       },
     },
+    location: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        len: [5]
+      }
+    }
   },
   {
     hooks: {
