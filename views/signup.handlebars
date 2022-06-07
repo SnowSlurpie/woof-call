@@ -1,0 +1,31 @@
+<div class="login-sheet">
+    <h2 class="page-title">Signup</h2>
+{{!--Form for Dog Info--}}
+    <form class="dogForm">
+        <label for = "dogName">Dog's Name:</label><br>
+        <input type="text" id="dogName" name="dogName" placeholder="Dog's Name Here"><br>
+        <label for = "dogBreed">Dog's Breed:</label><br>
+        <input type="text" id="dogBreed" name="dogBreed" placeholder="Dog's Breed Here"><br>
+        <label for = "dogAge">Dog's Age:</label><br>
+        <imput type="text" id="dogAge" name="dogAge" placeholder="Dog's Age Here"><br>
+        <input type="radio"  id="sex" name="sex" value="Male"> <label for="Male">Male</label><br>
+        <input type="radio"  id="sex" name="sex" value="Female"> <label for="Female">Female</label><br>
+{{!--Form for Owner Info --}}
+        <input type="text" id="ownerName" name="ownerName" placeholder="Your Name Here">What is your name?</label><br>
+        <input type="number" id="zipCode" name="zipCode" placeholder="Your Zip Code Here">What is your zip code?</label><br>
+    </form> 
+
+    {{!--Username/Email/Password section of SignUp Page --}}
+    <form class="ownerForm">
+        <label for="username">Username:</label>
+        <input type="username" id="username" name="username">
+        <label for="emailSignup">Email:</label>
+        <input type="email" id="email" name="email">
+        <label for="passwordSignup">Password:</label>
+        <input type="password" id="password" name="password">
+        <input type="submit" value="Sign Up">
+        
+    </form>
+</div>
+
+<script src="/js/signup.js"></script>
