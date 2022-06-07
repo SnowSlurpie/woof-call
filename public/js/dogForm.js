@@ -8,8 +8,11 @@ const dogFormHandler = async (event) => {
     const sex = document.querySelector('#sex').value.trim();
     const ownerName = document.querySelector('#ownerName').value.trim();
     const zipCode = document.querySelector('#zipCode').value.trim();
-    // fill in activity/playfulness/socialization/bio/is_fixed
-  
+    const activity = document.querySelector('active').value.trim();
+    const playfulness = document.querySelector('play').value.trim();
+    const socialization = document.querySelector('social').value.trim();
+    const is_fixed = document.querySelector('fixed').value.trim();
+    
     if (dogName && password) {
       const response = await fetch("/api/dogs", {
         method: "POST",
