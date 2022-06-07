@@ -1,4 +1,4 @@
-const { Model, DataTypes } = require("sequelize");
+const { Model, DataTypes, Sequelize } = require("sequelize");
 const sequelize = require("../config/connection");
 
 class Dog extends Model {}
@@ -18,6 +18,13 @@ Dog.init(
         isAlpha: true,
       },
     },
+    breed: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        isAlpha: true,
+      },
+    },
     age: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -28,10 +35,46 @@ Dog.init(
       },
     },
     //   add sex option/ enum
+    sex: {
+      type: DataTypes.ENUM("male", "female", "inter-sex"),
+      allowNull: false,
+    },
+    activity: {
+      type: DataTypes.INTEGER,
+      validate: {
+        isNumeric: true,
+        min:1,
+        max: 5
+      }
+    },
+    playfulness: {
+      type: DataTypes.INTEGER,
+      validate: {
+        isNumeric: true,
+        min:1,
+        max: 5
+      }
+    },
+    socialization: {
+      type: DataTypes.INTEGER,
+      validate: {
+        isNumeric: true,
+        min:1,
+        max: 5
+      }
+    },
+    bio: {
+      type: DataTypes.STRING
+    },
+    isFixed: {
+      type: DataTypes.BOOLEAN
+    },
     image: {
       type: DataTypes.STRING,
       allowNull: false,
-      // don't know how to validate image because it is a string dataType, unless we want to leave it null
+      validate: {
+        isUrl: true,
+      },
     },
     owner_id: {
       type: DataTypes.INTEGER,
@@ -49,4 +92,4 @@ Dog.init(
   }
 );
 
-model.exports = Dog;
+module.exports = Dog;
