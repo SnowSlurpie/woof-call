@@ -66,7 +66,7 @@ Dog.init(
     bio: {
       type: DataTypes.STRING
     },
-    isFixed: {
+    is_fixed: {
       type: DataTypes.BOOLEAN
     },
     image: {

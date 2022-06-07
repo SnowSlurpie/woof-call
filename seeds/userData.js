@@ -5,13 +5,15 @@ const userData = [
     name: "Josh",
     age: 30,
     email: "josh@josh.com",
-    password: "password123"
+    password: "password123",
+    location: 53207
   },
   {
     name: "Andrew",
     age: 32,
     email: "andrew@andrew.com",
-    password: "password123"
+    password: "password123",
+    location: 53151
   },
 ];
 
