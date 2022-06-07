@@ -47,6 +47,7 @@ User.init(
         len: [6],
       },
     },
+    //this should be a 5 digit zip code
     location: {
       type: DataTypes.INTEGER,
       allowNull: false,
