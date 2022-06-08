@@ -15,9 +15,9 @@
   </header>
   <nav>
     <a href="/">Home</a>
-    {{#if loggedout}}
+    {{#if loggedIn}}
     <button id="signup" class="btn-no-style">Create an account: Here</button>
-    {{#else}}
+    {{else}}
     <a href="/login">Login</a>
     {{/if}}
   </nav>
