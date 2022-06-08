@@ -16,12 +16,12 @@
   <nav>
     <a href="/">Home</a>
     {{#if loggedout}}
-    <button id="signup" class="btn-no-style">Create an account: Here</button>
     {{#else}}
-    <a href="/login">Login</a>
+    <a href="js/login">Login</a>
     {{/if}}
   </nav>
   <main>
   {{{ body }}}
   </main>
+  <script src="/js/logout.js"></script>
 </body>
