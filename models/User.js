@@ -54,6 +54,13 @@ User.init(
       validate: {
         len: [5]
       }
+    },
+    dog_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "dog",
+        key: "id",
+      },
     }
   },
   {

@@ -10,4 +10,8 @@ User.hasOne(Dog, {
   onDelete: "CASCADE",
 });
 
+Dog.hasOne(User, {
+  foreignKey: 'dog_id'
+});
+
 module.exports = { User, Dog };
