@@ -20,9 +20,9 @@ router.get('/login', (req, res) => {
 
 router.get('/dashboard', (req,res) => {
         if (req.session.loggedIn) {
-                res.render('dashboard')
+                res.render('dashboard');
         } else {
-                res.render('signup', {loggedIn: req.session.loggedIn})
+                res.redirect('/');
         }
 })
 
