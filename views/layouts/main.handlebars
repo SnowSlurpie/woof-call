@@ -13,13 +13,15 @@
   <header>
     <h1></h1>
   </header>
-  <nav>
-    <a href="/">Home</a>
-    {{#if loggedIn}}
-    <button id="signup" class="btn-no-style">Create an account: Here</button>
-    {{else}}
-    <a href="/login">Login</a>
-    {{/if}}
+  <nav class="navbar" role="navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">Home</a>
+      {{#if loggedIn}}
+      <button id="signup" class="btn-no-style">Create an account: Here</button>
+      {{else}}
+      <a class="navbar" role="navigation" href="/login">Login</a>
+      {{/if}}
+    </div>
   </nav>
   <main>
   {{{ body }}}
