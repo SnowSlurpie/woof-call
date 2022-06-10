@@ -41,6 +41,7 @@ const signupFormHandler = async (event) => {
           activity: dogActivity,
           playfulness: dogPlayfulness,
           socialization: dogSocialization,
+          image: imageUrl,
           is_fixed: dogFixed
           //TODO: add image url box in signup handlebars and add to dog creation
 
@@ -50,7 +51,7 @@ const signupFormHandler = async (event) => {
   
       if (userResponse.ok && dogResponse.ok) {
         console.log("Success!");
-        document.location.replace("/dashboard");
+        document.location.replace("/login");
       } else {
         alert(response.statusText);
       }
