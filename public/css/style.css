@@ -9,7 +9,6 @@ body {
 }
 
 footer {
-  position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
@@ -17,4 +16,27 @@ footer {
   width: 100vw;
   padding-top: 20px;
   color: darksalmon;
+  background-color: black;
+  text-align: center;
+}
+
+#loginSubmit {
+  background: darksalmon;
+  color: #fff;
+  border: 1px solid #eee;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #eee;
+  height: 50px;
+  width: 80px;
+  margin-left: 30px;
+  color: black;
+}
+
+#loginSubmit:hover {
+  background: rgb(192, 77, 38);
+}
+
+#zipCode::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

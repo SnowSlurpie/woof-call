@@ -19,7 +19,7 @@
         </div>
         {{!-- Dog's age --}}
         <div class="field">
-            <label class="label" for = "dogAge">Dog's Age:</label>
+            <label class="label" for="dogAge">Dog's Age:</label>
             <div class="control">
                 <input class="input" type="text" id="dogAge" name="dogAge" placeholder="Dog's Age Here"><br>
             </div>
@@ -39,15 +39,17 @@
         </div>
 {{!--Form for Owner Info --}}
         <div class="field">
-            <label class="label"></label>
-            <div>
-                <input>
+            <label class="label"> What is your name? </label>
+            <div class="control">
+                <input class="input" type="text" id="ownerName" name="ownerName" placeholder="Your Name Here">
             </div>
         </div>
-        <input type="text" id="ownerName" name="ownerName" placeholder="Your Name Here">
-        What is your name?</label><br>
-        <input type="number" id="zipCode" name="zipCode" placeholder="Your Zip Code Here">
-        What is your zip code?</label><br>
+        <div class="field">
+            <label class="label"> What is your zip code? </label>
+            <div class="control">
+                <input  type="number" id="zipCode" name="zipCode" placeholder="Your Zip Code Here">
+            </div>
+        </div>
     </form> 
 
     {{!--Username/Email/Password section of SignUp Page --}}

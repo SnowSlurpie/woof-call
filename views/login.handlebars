@@ -1,20 +1,43 @@
 <section class="loginform cf">
-    <form name="login"  action="index_submit"  accept charset="utf-8">
-        <ul>
-            <li>
-                <label for="usermail">Email</label>
-                <input type="email" name="usermail" id="usermail" placeholder="yourname@genericemailhere.com" required>
-            </li>
-            <li>
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password" placeholder="Password" required>
-            </li>
-            <li>
-                <input type="submit" value="Login">
-            </li>
-        </ul>
-    </form>
-</section>
+  <form name="login" action="index_submit" accept charset="utf-8">
+    <div class="field is-horizontal">
+      <div class="field-body">
+        {{! User Email }}
+        <div class="field">
+          <label class="label" for="usermail">Email</label>
+          <div class="control">
+            <input
+              class="input is-rounded"
+              type="email"
+              id="usermail"
+              name="usermail"
+              placeholder="Enter Email Here"
+              required
+            />
+          </div>
+        </div>
+        {{! User Password }}
+        <div class="field">
+          <label class="label" for="password">
+            Password
+          </label>
+          <div class="control">
+            <input
+              class="input is-rounded"
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter a Passowrd Here"
+              required
+            />
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <input id="loginSubmit" type="submit" value="Login" />
+
+  </form>
+</section>
 
 <script src="/js/login.js"></script>
