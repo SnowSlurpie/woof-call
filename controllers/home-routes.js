@@ -5,7 +5,7 @@ router.get('/', (req, res) => {
         if (req.session.loggedIn) {
                 res.render('dashboard')
         } else {
-                res.render('signup', {loggedIn: req.session.loggedIn})
+                res.render('signup')
         }
 })
 
