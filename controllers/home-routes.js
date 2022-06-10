@@ -3,7 +3,8 @@ const { User, Dog } = require('../models')
 
 router.get('/', (req, res) => {
         if (req.session.loggedIn) {
-                res.render('dashboard')
+                console.log(req.session.loggedIn)
+                res.render('dashboard', {loggedIn: req.session.loggedIn})
         } else {
                 res.render('signup')
         }
