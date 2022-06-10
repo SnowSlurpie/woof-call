@@ -1,0 +1,20 @@
+* {
+  margin: 5px;
+  padding: 5px;
+}
+
+body {
+  background: beige;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+  width: 100vw;
+  padding-top: 20px;
+  color: darksalmon;
+}

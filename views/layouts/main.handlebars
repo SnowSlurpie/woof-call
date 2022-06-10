@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Woof Call</title>
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css">
   <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -19,11 +20,14 @@
       {{#if loggedIn}}
       <button id="signup" class="btn-no-style">Create an account: Here</button>
       {{else}}
-      <a class="navbar" role="navigation" href="/login">Login</a>
+      <a class="navbar-item" role="navigation" href="/login">Login</a>
       {{/if}}
     </div>
   </nav>
   <main>
   {{{ body }}}
   </main>
+  <footer>
+    Sample Footer
+  </footer>
 </body>
