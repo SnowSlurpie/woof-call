@@ -50,10 +50,11 @@ router.get('/:id', (req, res) => {
 router.post('/', async (req, res) => {
     try {
       const dbUserData = await User.create({
-        name: req.body.user,
+        name: req.body.name,
         age: req.body.age,
         email: req.body.email,
         password: req.body.password,
+        location: req.body.location
       });
   
       req.session.save(() => {
@@ -95,6 +96,8 @@ router.post('/login', async (req, res) => {
       }
   
       req.session.save(() => {
+        req.session.user_id = dbUserData.id
+        req.session.email = dbUserData.email
         req.session.loggedIn = true;
   
         res
