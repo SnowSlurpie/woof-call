@@ -15,8 +15,8 @@
   </header>
   <nav>
     <a href="/">Home</a>
-    {{#if loggedout}}
-    {{#else}}
+    {{#if loggedIn}}
+    {{else}}
     <a href="js/login">Login</a>
     {{/if}}
   </nav>
