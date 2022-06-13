@@ -1,11 +1,7 @@
 <div class="login-sheet">
     <h2 class="title is-2" id="signup-title">Signup</h2>
 {{!--Form for Dog Info--}}
-{{!-- add image url text input --}}
-<form>
-    <label class="label" for="image">Please paste the URL link for your dog's photo here:</label>
-    <input class="input" type="text" id="imageUrl" name="image" placeholder="imageURL">
-</form>
+
 <img src="" alt="">
     <form class="dogForm">
         {{!-- Dog's name --}}
@@ -29,6 +25,11 @@
                 <input class="input" type="text" id="dogAge" name="dogAge" placeholder="Dog's Age Here"><br>
             </div>
         </div>
+        {{!-- add image url text input --}}
+        <div class="field">
+            <label class="label" for="image">Please paste the URL link for your dog's photo here:</label>
+            <input class="input" type="text" id="imageUrl" name="image" placeholder="imageURL">
+        </div>
         {{!-- Dog's Sex --}}
         <div class="field">
             <div class="control">
@@ -46,8 +47,8 @@
             <div class="columns">
                     
                 <div class="column is-one-quarter">
-                    <div class="question-container" id="activeDog">
-                       <h2>How active is your dog?</h2>
+                    <div class="question-container" >
+                       How active is your dog?
                         </div>
                         <div class="option-container">
                                 <label for="notVery">Not Very</label>
