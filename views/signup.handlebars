@@ -3,8 +3,8 @@
 {{!--Form for Dog Info--}}
 {{!-- add image url text input --}}
 <form>
-    <label for="image">Please paste the URL link for your dog's photo here:</label>
-    <input type="text" id="imageUrl" name="image" placeholder="imageURL">
+    <label class="label" for="image">Please paste the URL link for your dog's photo here:</label>
+    <input class="input" type="text" id="imageUrl" name="image" placeholder="imageURL">
 </form>
 <img src="" alt="">
     <form class="dogForm">
@@ -42,17 +42,77 @@
                 </label>
             </div>
         </div>
-{{!--Form for Owner Info --}}
-        <div class="field">
-            <label class="label"> What is your name? </label>
-            <div class="control">
-                <input class="input" type="text" id="ownerName" name="ownerName" placeholder="Your Name Here">
+        <form class="questions">
+            <div class="columns">
+                    
+                <div class="column is-one-quarter">
+                    <div class="question-container" id="activeDog">
+                       <h2>How active is your dog?</h2>
+                        </div>
+                        <div class="option-container">
+                                <label for="notVery">Not Very</label>
+                                <input type="radio"  class="active" name="active" value="1">
+                                <input type="radio"  class="active" name="active" value="2">
+                                <input type="radio"  class="active" name="active" value="3">
+                                <input type="radio"  class="active" name="active" value="4">
+                                <input type="radio" class="active" name="active" value="5">They cant stop moving!</button>
+                    </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="question-container">
+                            How does your dog play?
+                        </div>
+                        <div class="option-container">
+                            <label for="notVery">Ruff!</label>
+                            <input type="radio"  class="play" name="play" value="1">
+                            <input type="radio"  class="play" name="play" value="2">
+                            <input type="radio"  class="play" name="play" value="3">
+                            <input type="radio"  class="play" name="play" value="4">
+                            <input type="radio" class="play" name="play" value="5">Nicely</button>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="question-container">
+                            How socialized is your dog?
+                        </div>
+                        <div class="option-container">
+                            <label for="notVery">Not very</label>
+                            <input type="radio"  class="social" name="social" value="1">
+                            <input type="radio"  class="social" name="social" value="2">
+                            <input type="radio"  class="social" name="social" value="3">
+                            <input type="radio"  class="social" name="social" value="4">
+                            <input type="radio" class="social" name="social" value="5">Social Butterfly
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="question-container">
+                          Is your dog spayed/neutered?
+                        </div>
+                        <div class="option-container">
+                            <label for="fixedTrue">Yes</label>
+                            <input type="radio"  class="fixed" name="fixedTrue" value=true>
+                            <label for="fixedFalse">No</label>
+                            <input type="radio"  class="fixed" name="fixedFalse" value=false>
+                        </div>
+                    </div>
             </div>
-        </div>
-        <div class="field">
-            <label class="label"> What is your zip code? </label>
-            <div class="control">
-                <input  type="number" id="zipCode" name="zipCode" placeholder="Your Zip Code Here">
+        </form> 
+{{!--Form for Owner Info --}}
+        <div class="columns">
+            <div class="field column">
+                <label class="label"> What is your name? </label>
+                <div class="control">
+                    <input class="input" type="text" id="ownerName" name="ownerName" placeholder="Your Name Here">
+                </div>
+            </div>
+            <div class="field column">
+                <label class="label"> What is your zip code? </label>
+                <div class="control">
+                    <input  type="number" id="zipCode" name="zipCode" placeholder="Your Zip Code Here">
+                </div>
             </div>
         </div>
     </form> 
@@ -98,73 +158,6 @@
        {{!-- <input type="submit" value="Sign Up"> --}}
         
     </form>
-
-<h2>First, a few questions..</h2>
-            <h3>Please answer these questions so we can help you find your perfect playmate!</h3>
-        <div>
-        <form class="questions">
-            <div class="question-container">
-               <h2>How active is your dog?</h2>
-            </div>
-            <div class="option-container">
-                    <label for="notVery">Not Very</label>
-
-                    <input type="radio"  class="active" name="active" value="1"> 
-
-                    <input type="radio"  class="active" name="active" value="2"> 
-
-                    <input type="radio"  class="active" name="active" value="3"> 
-
-                    <input type="radio"  class="active" name="active" value="4">
-
-                    <input type="radio" class="active" name="active" value="5">They cant stop moving!</button>
-            </div>
-            <div class="question-container">
-                How does your dog play?
-            </div>
-            <div class="option-container">
-                <label for="notVery">Ruff!</label>
-
-                <input type="radio"  class="play" name="play" value="1"> 
-
-                <input type="radio"  class="play" name="play" value="2"> 
-
-                <input type="radio"  class="play" name="play" value="3"> 
-
-                <input type="radio"  class="play" name="play" value="4">
-
-                <input type="radio" class="play" name="play" value="5">Nicely</button>
-            </div>
-            <div class="question-container">
-                How socialized is your dog?
-            </div>
-            <div class="option-container">
-                    <label for="notVery">Not very</label>
-
-                    <input type="radio"  class="social" name="social" value="1"> 
-
-                    <input type="radio"  class="social" name="social" value="2"> 
-
-                    <input type="radio"  class="social" name="social" value="3"> 
-
-                    <input type="radio"  class="social" name="social" value="4">
-
-                  <input type="radio" class="social" name="social" value="5">Social Butterfly
-          </div>
-          </div>
-             <div class="question-container">
-              Is your dog spayed/neutered?
-          </div>
-           <div class="option-container">
-               <label for="fixedTrue">Yes</label>
-                <input type="radio"  class="fixed" name="fixedTrue" value=true>
-                <label for="fixedFalse">No</label>
-                <input type="radio"  class="fixed" name="fixedFalse" value=false>
-          </div>
-                  <input type="submit" id="submit-input" value="Sign Up">
-
-        </form>  
-        </div>
 
 </div>
 
