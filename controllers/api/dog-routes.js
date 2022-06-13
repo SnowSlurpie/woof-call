@@ -41,6 +41,7 @@ router.get('/:id', (req, res) => {
 //dog creation route
 router.post('/', async (req, res) => {
     try {
+        console.log("Stage1");
       const dbDogData = await Dog.create({
         name: req.body.name,
         breed: req.body.breed,
@@ -54,7 +55,7 @@ router.post('/', async (req, res) => {
         image: req.body.image,
         owner_id: req.body.owner_id
       });
-
+console.log("Stage2")
       res.status(200).json(dbDogData);
       
     } catch (err) {
@@ -62,6 +63,5 @@ router.post('/', async (req, res) => {
       res.status(500).json(err);
     }
 });
-
 
 module.exports = router;

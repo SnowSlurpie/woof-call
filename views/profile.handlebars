@@ -1,12 +1,13 @@
 <div class="posts list-group">
+  <h1>HELLO</h1>
   {{#each dogData}}
     <a class="list-item flex-row justify-space-between" href="/dashboard/edit/{{id}}">
       <span>{{dogData.name}}</span>
-      <span>{{dogData.breed}}</span>
-      <span>{{dogData.age}}</span>
-      <span>{{dogData.sex}}</span>
-      <span>{{dogData.ZipCode}}</span>
-      <span>{{dogData.bio}}</span>
+      <span>{{breed}}</span>
+      <span>{{age}}</span>
+      <span>{{sex}}</span>
+      <span>{{ZipCode}}</span>
+      <span>{{bio}}</span>
     </a>
   {{/each}}
 </div>

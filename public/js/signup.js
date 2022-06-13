@@ -30,9 +30,10 @@ const signupFormHandler = async (event) => {
         }),
         headers: { "Content-Type": "application/json" },
       });
-
+console.log(userResponse, name, password, age, email, location);
       if (userResponse.ok) {
         console.log("Success!");
+        //redirect to login page
       } else {
         alert(userResponse.statusText);
       }
@@ -66,5 +67,5 @@ const signupFormHandler = async (event) => {
   };
   
   document
-    .querySelector(".questions")
+    .querySelector(".dogForm")
     .addEventListener("submit", signupFormHandler);

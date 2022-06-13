@@ -17,20 +17,20 @@
         <input type="text" id="ownerName" name="ownerName" placeholder="Your Name Here">What is your name?</label><br>
         <input type="text" id="zipCode" name="zipCode" placeholder="Your Zip Code Here">What is your zip code?</label><br>
         <input type="text" id="ownerAge" name="ownerAge" placeholder="Your Age Here">How old are you?</label><br>
-    </form> 
+ 
 
     {{!--Username/Email/Password section of SignUp Page --}}
-    <form class="ownerForm">
+    {{!-- <form class="ownerForm"> --}}
         <label for="emailSignup">Email:</label>
         <input type="email" id="email" name="emailSignup">
         <label for="passwordSignup">Password:</label>
         <input type="password" id="password" name="passwordSignup">
-    </form>
+    {{!-- </form> --}}
 
 <h2>First, a few questions..</h2>
             <h3>Please answer these questions so we can help you find your perfect playmate!</h3>
         <div>
-        <form class="questions">
+        {{!-- <form class="questions"> --}}
             <div class="question-container">
                <h2>How active is your dog?</h2>
             </div>
@@ -45,9 +45,9 @@
 
                     <input type="radio" class="active" name="active" value="5">They cant stop moving!</button>
             </div>
-              <div class="question-container">
+                <div class="question-container">
                 How does your dog play?
-            </div>
+                </div>
             <div class="option-container">
                 <input type="radio"  class="play" name="play" value="1"> <label for="notVery">Ruff!</label>
 
@@ -71,8 +71,8 @@
 
                     <input type="radio"  class="social" name="social" value="4">
 
-                  <input type="radio" class="social" name="social" value="5">Social Butterfly
-          </div>
+                  <input type="radio" class="social" name="social" value="5"><label>Social Butterfly</label>
+            </div>
           </div>
              <div class="question-container">
               Is your dog spayed/neutered?
@@ -82,12 +82,11 @@
                 <input type="radio"  class="fixed" name="fixedTrue" value=true>
                 <label for="fixedFalse">No</label>
                 <input type="radio"  class="fixed" name="fixedFalse" value=false>
-          </div>
+            </div>
                   <input type="submit" id="submit-input" value="Sign Up">
 
-        </form>  
-        </div>
-
+    </form>  
+        
 </div>
 
 <script src="/js/signup.js"></script>
