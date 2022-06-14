@@ -104,7 +104,7 @@ body {
 
 /* profile pages styles start */
 
-.aboutMeTitle {
+#aboutMeTitle {
   text-align: center;
   margin-top: 5px;
   -webkit-text-stroke: 0.05px darksalmon;

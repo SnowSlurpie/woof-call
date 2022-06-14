@@ -1,5 +1,4 @@
 <div class="posts list-group">
-  <h1>HELLO</h1>
   {{#each dogData}}
     <a
       class="list-item flex-row justify-space-between"
@@ -7,15 +6,15 @@
     >
       <div class="columns">
         <div class="column is-two-fifths">
-          <span>{{name}}</span>
-          <span>{{bio}}</span>
+          <p>{{name}}</p>
+          <p>{{bio}}</p>
         </div>
 
         <div class="column">
           <span>{{image}}</span>
         </div>
       </div>
-      <h2 class="title is-2"> About Me! </h2>
+      <h2 class="title is-2" id="aboutMeTitle"> About Me! </h2>
       <div class="columns">
         <div class="column is-three-fifths is-offset-one-fifth">
           <span>{{breed}}</span>
