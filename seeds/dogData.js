@@ -9,9 +9,10 @@ const dogData = [
     activity: 3,
     playfulness: 3,
     socialization: 3,
-    bio: 'lorem ipsum bio text',
+    bio: "lorem ipsum bio text",
     is_fixed: true,
-    image: "www.google.com",
+    image: "Photo of Dog Here",
+    // needs to be fixed
     user_id: 1,
   },
   {
@@ -22,7 +23,7 @@ const dogData = [
     activity: 3,
     playfulness: 3,
     socialization: 3,
-    bio: 'lorem ipsum bio text',
+    bio: "lorem ipsum bio text",
     is_fixed: true,
     image: "www.google.com",
     user_id: 2,

@@ -43,38 +43,38 @@ Dog.init(
       type: DataTypes.INTEGER,
       validate: {
         isNumeric: true,
-        min:1,
-        max: 5
-      }
+        min: 1,
+        max: 5,
+      },
     },
     playfulness: {
       type: DataTypes.INTEGER,
       validate: {
         isNumeric: true,
-        min:1,
-        max: 5
-      }
+        min: 1,
+        max: 5,
+      },
     },
     socialization: {
       type: DataTypes.INTEGER,
       validate: {
         isNumeric: true,
-        min:1,
-        max: 5
-      }
+        min: 1,
+        max: 5,
+      },
     },
     bio: {
-      type: DataTypes.STRING
+      type: DataTypes.STRING,
     },
     is_fixed: {
-      type: DataTypes.BOOLEAN
+      type: DataTypes.BOOLEAN,
     },
     image: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-        isUrl: true,
-      },
+      // validate: {
+      //   isUrl: true,
+      // },
     },
     owner_id: {
       type: DataTypes.INTEGER,
