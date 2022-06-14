@@ -37,9 +37,9 @@ http://localhost:3001
 ```
 for deployed link on heroku
 
-```text
+<!-- ```text
 //heroku link here
-```
+``` -->
 
 ## Usage
 
