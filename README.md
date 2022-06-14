@@ -56,9 +56,9 @@ When you visit the website you will be asked to Log-in, or to create an account 
 ## Credits
 
 
-Andrew Goetz
-Alex Running
-Joshua Rangai
-Kristi Garcia-Stebbins
+Andrew Goetz - [GitHub](https://github.com/agoetz4407)
+Alex Running - [GitHub](https://github.com/SnowSlurpie)
+Joshua Rangai - [GitHub](https://github.com/jrrangai)
+Kristi Garcia-Stebbins - [GitHub](https://github.com/kristiboo03)
 
 
