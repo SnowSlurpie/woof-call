@@ -52,8 +52,8 @@ User.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
-        len: [5]
-      }
+        len: [5],
+      },
     },
     dog_id: {
       type: DataTypes.INTEGER,
@@ -61,7 +61,7 @@ User.init(
         model: "dog",
         key: "id",
       },
-    }
+    },
   },
   {
     hooks: {

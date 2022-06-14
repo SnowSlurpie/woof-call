@@ -5,22 +5,23 @@
       href="/dashboard/edit/{{id}}"
     >
       <div class="columns">
-        <div class="column is-two-fifths">
+        <div class="column is-half">
           <p class="profileContent">{{name}}</p>
+          <br />
           <p class="profileContent">{{bio}}</p>
         </div>
 
         <div class="column">
-          <p>{{image}}</p>
+          <p class="image" id="imageProfile">{{image}}</p>
         </div>
       </div>
       <h2 class="title is-2" id="aboutMeTitle"> About Me! </h2>
       <div class="columns">
         <div class="column is-three-fifths is-offset-one-fifth">
-          <p class="profileContent">{{breed}}</p>
-          <p class="profileContent">{{age}}</p>
-          <p class="profileContent">{{sex}}</p>
-          <p class="profileContent">{{ZipCode}}</p>
+          <p class="profileContent">Breed: {{breed}}</p>
+          <p class="profileContent">Age: {{age}}</p>
+          <p class="profileContent">Sex: {{sex}}</p>
+          <p class="profileContent">Zip Code: {{location}}</p>
         </div>
       </div>
     </a>

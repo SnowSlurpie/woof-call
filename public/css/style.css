@@ -111,4 +111,16 @@ body {
   text-decoration: underline;
 }
 
+.profileContent {
+  text-align: center;
+  font-size: 20px;
+  color: black;
+}
+
+#imageProfile {
+  align-items: center;
+  font-size: 30px;
+  color: black;
+}
+
 /* profile pages end */
