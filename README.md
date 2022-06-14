@@ -41,9 +41,9 @@ http://localhost:3001
 
 for deployed link on heroku
 
-<!-- ```text
-//heroku link here
-``` -->
+```text
+https://woof-call.herokuapp.com/
+```
 
 ## Usage
 
