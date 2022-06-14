@@ -1,4 +1,6 @@
-#Pawnder
+# Pawnder
+
+<img src="images/pawnder.png">
 
 ## Description
 
@@ -47,16 +49,16 @@ This application will help you find other linke-minded owners with dogs that are
 
 When you visit the website you will be asked to Log-in, or to create an account if you havent already.
 
-<!-- // <img src= ""> -->
+<img src= "./images/main.png">
 
 
 
 ## Credits
 
-Alex Running
+
 Andrew Goetz
+Alex Running
 Joshua Rangai
 Kristi Garcia-Stebbins
 
-## License
-MIT License
+
