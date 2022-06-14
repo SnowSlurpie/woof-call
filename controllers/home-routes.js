@@ -3,9 +3,10 @@ const { User, Dog } = require('../models')
 
 router.get('/', (req, res) => {
         if (req.session.loggedIn) {
-                res.render('dashboard')
+                console.log(req.session.loggedIn)
+                res.render('profile', {layout:'dashboard', loggedIn: req.session.loggedIn})
         } else {
-                res.render('signup', {loggedIn: req.session.loggedIn})
+                res.render('signup')
         }
 })
 
@@ -18,12 +19,5 @@ router.get('/login', (req, res) => {
         res.render('login');
 });
 
-router.get('/dashboard', (req,res) => {
-        if (req.session.loggedIn) {
-                res.render('dashboard');
-        } else {
-                res.redirect('/');
-        }
-})
 
 module.exports = router;

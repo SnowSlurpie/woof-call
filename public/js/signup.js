@@ -11,13 +11,14 @@ const signupFormHandler = async (event) => {
     const dogPlayfulness = document.querySelector("[name='play']:checked").value;
     const dogSocialization = document.querySelector("[name='social']:checked").value;
     const dogFixed = document.querySelector('.fixed:checked').value;
+    const imageUrl = document.querySelector('#imageUrl').value.trim();
 
     //changed username to name
-    const name = document.querySelector("#name").value.trim();
-    const age = document.getElementById('ownerAge').value.trim();
+    const name = document.querySelector("#ownerName").value.trim();
+    const age = document.querySelector('#ownerAge').value.trim();
     const password = document.querySelector("#password").value.trim();
     const email = document.querySelector("#email").value.trim();
-    if (username && password) {
+    if (email && password) {
       const userResponse = await fetch("/api/users", {
         method: "POST",
         body: JSON.stringify({
@@ -29,6 +30,13 @@ const signupFormHandler = async (event) => {
         }),
         headers: { "Content-Type": "application/json" },
       });
+console.log(userResponse, name, password, age, email, location);
+      if (userResponse.ok) {
+        console.log("Success!");
+        //redirect to login page
+      } else {
+        alert(userResponse.statusText);
+      }
 
       const dogResponse = await fetch('/api/dogs', {
         //created dog after getting user setup use dogData
@@ -41,22 +49,23 @@ const signupFormHandler = async (event) => {
           activity: dogActivity,
           playfulness: dogPlayfulness,
           socialization: dogSocialization,
-          is_fixed: dogFixed
-          //TODO: add image url box in signup handlebars and add to dog creation
+          image: imageUrl,
+          is_fixed: dogFixed,
+          owner_id: userResponse.id
 
         }),
         headers: { "Content-Type": "application/json" },
       });
   
-      if (userResponse.ok && dogResponse.ok) {
+      if (dogResponse.ok) {
         console.log("Success!");
-        document.location.replace("/dashboard");
+        document.location.replace("/");
       } else {
-        alert(response.statusText);
+        alert(dogResponse.statusText);
       }
     }
   };
   
   document
-    .querySelector("#submit-input")
+    .querySelector(".dogForm")
     .addEventListener("submit", signupFormHandler);
