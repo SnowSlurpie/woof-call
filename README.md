@@ -32,11 +32,13 @@ npm run seed
 ```text
 npm start
 ```
+
 go to
 
 ```text
 http://localhost:3001
 ```
+
 for deployed link on heroku
 
 <!-- ```text
@@ -49,16 +51,12 @@ This application will help you find other linke-minded owners with dogs that are
 
 When you visit the website you will be asked to Log-in, or to create an account if you havent already.
 
-<img src= "./images/main.png">
-
-
+<img src= "./public/images/main.png">
+<img src= "./public/images/pawnder_dashboard.jpg">
 
 ## Credits
 
-
-Andrew Goetz - [GitHub](https://github.com/agoetz4407)
-Alex Running - [GitHub](https://github.com/SnowSlurpie)
-Joshua Rangai - [GitHub](https://github.com/jrrangai)
-Kristi Garcia-Stebbins - [GitHub](https://github.com/kristiboo03)
-
-
+<li> Andrew Goetz - [GitHub](https://github.com/agoetz4407)
+<li> Alex Running - [GitHub](https://github.com/SnowSlurpie)
+<li> Joshua Rangai - [GitHub](https://github.com/jrrangai)
+<li> Kristi Garcia-Stebbins - [GitHub](https://github.com/kristiboo03)
