@@ -8,6 +8,7 @@ body {
   font-family: cursive;
 }
 
+/* Navigation styles begin */
 .navbar {
   margin: 0;
   padding-left: 30px;
@@ -20,13 +21,7 @@ body {
   font-size: 30px;
   font-weight: bold;
 }
-
-#signup-title {
-  text-align: center;
-  margin-top: 5px;
-  -webkit-text-stroke: 0.05px darksalmon;
-  text-decoration: underline;
-}
+/* navigation styles end */
 
 /* styles for radio type questions */
 .question-container {
@@ -41,6 +36,9 @@ body {
   border-radius: 5px;
 }
 
+/* end radio styles */
+
+/* footer styles begin */
 #footer {
   position: relative;
   bottom: 0;
@@ -59,6 +57,15 @@ body {
 
 #slogan {
   font-style: italic;
+}
+/* footer styles end */
+
+/* signup pages styles begin */
+#signup-title {
+  text-align: center;
+  margin-top: 5px;
+  -webkit-text-stroke: 0.05px darksalmon;
+  text-decoration: underline;
 }
 
 #submit-input {
@@ -92,3 +99,16 @@ body {
   -webkit-appearance: none;
   margin: 0;
 }
+
+/* signup pages styles end */
+
+/* profile pages styles start */
+
+.aboutMeTitle {
+  text-align: center;
+  margin-top: 5px;
+  -webkit-text-stroke: 0.05px darksalmon;
+  text-decoration: underline;
+}
+
+/* profile pages end */
