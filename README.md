@@ -47,7 +47,7 @@ This application will help you find other linke-minded owners with dogs that are
 
 When you visit the website you will be asked to Log-in, or to create an account if you havent already.
 
-<img src= "">
+<!-- // <img src= ""> -->
 
 
 
