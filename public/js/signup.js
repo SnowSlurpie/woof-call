@@ -1,6 +1,6 @@
 const signupFormHandler = async (event) => {
     event.preventDefault();
-
+console.log("Form Submitted")
     //grabs location for user use ZIP
     const location = document.getElementById('zipCode').value.trim();
     const dogName = document.getElementById('dogName').value.trim();
@@ -66,6 +66,12 @@ console.log(userResponse, name, password, age, email, location);
     }
   };
   
-  document
+ console.log( document
+    .querySelector(".dogForm")) 
+  
+  
+    document
     .querySelector(".dogForm")
+   
+   
     .addEventListener("submit", signupFormHandler);

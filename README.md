@@ -1,6 +1,6 @@
 # Pawnder
 
-<img src="images/pawnder.png">
+<img src= "./public/images/pawnder.jpg">
 
 ## Description
 
